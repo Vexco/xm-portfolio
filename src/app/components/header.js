@@ -3,7 +3,11 @@ import React from "react";
 
 export default function Header() {
     return (
-        <header className="flex justify-between items-center w-full px-8 py-4 bg-slate-900 text-white">
+        <header className="
+          flex justify-between items-center w-full 
+          px-8 py-4 
+          bg-orange-200 text-blue-950 
+          dark:bg-slate-900 dark:text-white">
       
       {/* 1er Enfant (Tout à gauche) : Ton Nom */}
       <div className="text-2xl font-bold tracking-tight">
