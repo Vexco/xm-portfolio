@@ -6,11 +6,11 @@ export default function Section({ id, bgColor, title, children, titleColor, text
       id={id}
       className={`min-h-screen w-full flex flex-col justify-center items-center p-8 ${bgColor}`}
     >
-      <div className="max-w-4xl text-center w-full">
+      <div className="max-w-7xl text-center w-full">
         <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${titleColor}`}>
           {title}
         </h2>
-        <div className={`text-lg ${textColor}`}>
+        <div className={`flex flex-col justify-center items-center text-lg ${textColor}`}>
           {children}
         </div>
       </div>

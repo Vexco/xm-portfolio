@@ -1,6 +1,7 @@
-import Image from "next/image";
 import Section from "./components/section";
+import Project from "./components/projectCard";
 import React from "react";
+import Logo from '../../public/nextjs.svg'
 
 export default function Home() {
   return (
@@ -41,24 +42,11 @@ export default function Home() {
         id="projets" title="Mes Projets"
         bgColor="bg-orange-100 dark:bg-blue-950"
         titleColor="text-gray-800 dark:text-white"
-        textColor="text-gray-600 dark:text-gray-300">
-        <div className="w-full flex flex-row justify-start items-center overflow-x-auto whitespace-nowrap">
-          <div className="bg-white min-w-xl h-32 m-1">
-            <p>Text</p>
-          </div>
-          <div className="bg-white min-w-xl h-32 m-4">
-            <p>Text</p>
-          </div>
-          <div className="bg-white min-w-xl h-32 m-4">
-            <p>Text</p>
-          </div>
-          <div className="bg-white min-w-xl h-32 m-4">
-            <p>Text</p>
-          </div>
-          <div className="bg-white min-w-xl h-32 m-4">
-            <p>Text</p>
-          </div>
-        </div>
+        textColor="text-gray-600 dark:text-gray-300 flex-row justify-start items-center overflow-x-auto">
+          <Project id="Projet1" title="Portfolio Xavier Mantellato" image={Logo} description="Création de mon portfolio à la main à l'aide de NextJS. L'objectif de cet exercice a été l'entrainement et la prise de compétence sur une technologie NextJS se rapprochant donc du React et utilisant TailwindCSS en framework css" />
+          <Project id="Projet1" title="Portfolio Xavier Mantellato" image={Logo} description="Création de mon portfolio à la main à l'aide de NextJS. L'objectif de cet exercice a été l'entrainement et la prise de compétence sur une technologie NextJS se rapprochant donc du React et utilisant TailwindCSS en framework css" />
+          <Project id="Projet1" title="Portfolio Xavier Mantellato" image={Logo} description="Création de mon portfolio à la main à l'aide de NextJS. L'objectif de cet exercice a été l'entrainement et la prise de compétence sur une technologie NextJS se rapprochant donc du React et utilisant TailwindCSS en framework css" />
+          <Project id="Projet1" title="Portfolio Xavier Mantellato" image={Logo} description="Création de mon portfolio à la main à l'aide de NextJS. L'objectif de cet exercice a été l'entrainement et la prise de compétence sur une technologie NextJS se rapprochant donc du React et utilisant TailwindCSS en framework css" />
       </Section>
 {/* //#endregion Mes Projets*/}
 
@@ -81,7 +69,7 @@ export default function Home() {
 
         <p>Si vous souhaitez me contacter</p>
 
-        <form>
+        <form className="min-w-3xl">
           <div className="border-b dark:border-white/5 pb-12 border-black/5">
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
               <div className="sm:col-span-3">
