@@ -57,6 +57,15 @@ export default function Home() {
         titleColor="text-gray-800 dark:text-white"
         textColor="text-gray-600 dark:text-gray-300">
         <p>Voici mon CV</p>
+        <div style={{ width: '50em', maxWidth: '200em', height: '700px', margin: '0 auto', padding: '20px' }}>
+          <iframe 
+            src="/CV_developpeur_canada.pdf#toolbar=0&navpanes=0" 
+            width="100%" 
+            height="100%" 
+            style={{ border: '1px solid #ccc', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}
+            title="CV Xavier MANTELLATO"
+          />
+    </div>
       </Section>
 {/* //#endregion */}
       
