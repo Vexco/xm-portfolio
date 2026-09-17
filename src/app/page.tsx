@@ -61,13 +61,13 @@ export default function Home() {
               <p className="text-3xl font-serif font-bold leading-relaxed">Portfolio Personnel</p>
               <p className="text-xl leading-relaxed mb-5">Page de présentation personnelle pour centraliser projets et compétences. Lien pour contacter si interessé.</p>
               <div className="flex flex-row justify-evenly leading-relaxed">
-                <div className="pl-7 pr-7 pt-1 pb-1 bg-black/25 rounded-xl border border-black/25">
+                <div className="pl-7 pr-7 pt-1 pb-1 bg-black/5 rounded-xl border border-black/25">
                   <p className="font-mono text-sm">TypeScript</p>
                 </div>
-                <div className="pl-7 pr-7 pt-1 pb-1 bg-black/25 rounded-xl border border-black/25">
+                <div className="pl-7 pr-7 pt-1 pb-1 bg-black/5 rounded-xl border border-black/25">
                   <p className="font-mono text-sm">NextJS</p>
                 </div>
-                <div className="pl-7 pr-7 pt-1 pb-1 bg-black/25 rounded-xl border border-black/25">
+                <div className="pl-7 pr-7 pt-1 pb-1 bg-black/5 rounded-xl border border-black/25">
                   <p className="font-mono text-sm">TailWindCSS</p>
                 </div>
               </div>
@@ -110,22 +110,33 @@ export default function Home() {
         <div className="flex flex-col items-start justify-center">
           <h2 className="text-3xl font-serif font-bold mb-6">Mes étapes de travail</h2>
           <div className="flex flex-row items-stretch justify-start w-full p-6 mb-10 min-h-70">
-            <div className="flex flex-col items-center justify-center rounded-2xl border border-black/15 mr-8 bg-white/50 w-1/4">
-              <h3>Cadrer</h3>
-              <p>On échange pour préciser le besoin, les contraintes et les périmètres.</p>
+            <div className="flex flex-col items-stretch justify-center rounded-2xl border border-black/15 mr-8 bg-white/50 w-1/4 p-5">
+              <h3 className="font-bold font-serif text-2xl leading-relaxed mb-2">Cadrer</h3>
+              <p className="leading-relaxed font-serif text-gray">On échange pour préciser le besoin, les contraintes et les périmètres.</p>
             </div>
-            <div className="flex flex-col items-center justify-center rounded-2xl border border-black/15 mr-8 bg-white/50 w-1/4">
-              <h3>Planifier</h3>
-              <p>Suite au cadrage je choisis les technologies et l'architecture adaptée au projet</p>
+            <div className="flex flex-col items-stretch justify-center rounded-2xl border border-black/15 mr-8 bg-white/50 w-1/4 p-5">
+              <h3 className="font-bold font-serif text-2xl leading-relaxed mb-2">Planifier</h3>
+              <p className="leading-relaxed font-serif text-gray">Suite au cadrage je choisis les technologies et l'architecture adaptée au projet</p>
             </div>
-            <div className="flex flex-col items-center justify-center rounded-2xl border border-black/15 mr-8 bg-white/50 w-1/4">
-              <h3>Construire</h3>
-              <p>J'avance sur le projet par incréments réguliers testés et révisions régulières.</p>
+            <div className="flex flex-col items-stretch justify-center rounded-2xl border border-black/15 mr-8 bg-white/50 w-1/4 p-5">
+              <h3 className="font-bold font-serif text-2xl leading-relaxed mb-2">Construire</h3>
+              <p className="leading-relaxed font-serif text-gray">J'avance sur le projet par incréments réguliers testés et révisions régulières.</p>
             </div>
-            <div className="flex flex-col items-center justify-center rounded-2xl border border-black/15 bg-white/50 w-1/4">
-              <h3>Livrer</h3>
-              <p>Je déploie, mesure et transmets une base saine qui tient dans la durée</p>
+            <div className="flex flex-col items-stretch justify-center rounded-2xl border border-black/15 bg-white/50 w-1/4 p-5">
+              <h3 className="font-bold font-serif text-2xl leading-relaxed mb-2">Livrer</h3>
+              <p className="leading-relaxed font-serif text-gray">Je déploie, mesure et transmets une base saine qui tient dans la durée</p>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col justify-center w-full max-w-6xl mt-8">
+        <div className="flex flex-col items-start p-13 mb-10 justify-center rounded-2xl border border-black/15 bg-[#223831]">
+          <h2 className="text-5xl font-serif font-bold mb-6 text-white max-w-125">Besoin de me contacter? Une idée à concrétiser?<br/>Parlons-en !</h2>
+          <p className="font-serif text-white/65 max-w-75">Je suis disponible pour concevoir, développer ou faire évoluer votre prochain produit numérique.</p>
+          <div className="flex flex-row">
+            <a className="bg-[#D47032] text-[#223831] text-sm rounded-full px-5 py-2.5 mt-5 mx-2 transition-transform hover:-translate-y-0.5">xavier.mantellato.pro@gmail.com</a>
+            <a className="text-white text-sm border border-white/25 rounded-full px-5 py-2.5 mt-5 mx-2 transition-transform hover:bg-white/5">LinkedIn</a>
+            <a className="text-white text-sm border border-white/25 rounded-full px-5 py-2.5 mt-5 mx-2 transition-transform hover:bg-white/5">GitHub</a>
           </div>
         </div>
       </div>

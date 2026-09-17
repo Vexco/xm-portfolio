@@ -21,12 +21,6 @@ export default function Header() {
   // La navbar est visible si on est en haut de la page OU si la souris la survole
   const isVisible = !isScrolled || isHovered;
     return (
-      <>
-      <div 
-        className="fixed top-0 left-0 w-full h-8 z-40"
-        onMouseEnter={() => setIsHovered(true)}
-      />
-
       <header 
           onMouseLeave={() => setIsHovered(false)}
           className={`
@@ -59,6 +53,5 @@ export default function Header() {
       </nav>
 
     </header>
-            </>
     )
 }
