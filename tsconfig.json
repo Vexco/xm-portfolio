@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "src/app/components/header.js"  ],
+, "src/app/components/header.js", "src/app/page.tsx.old", "src/app/components/card.js"  ],
   "exclude": ["node_modules"]
 }

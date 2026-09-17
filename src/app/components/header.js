@@ -27,11 +27,15 @@ export default function Header() {
         onMouseEnter={() => setIsHovered(true)}
       />
 
-      <header className="
-          flex justify-between items-center w-full 
-          px-8 py-4 
-          bg-orange-200 text-blue-950 
-          dark:bg-slate-900 dark:text-white">
+      <header 
+          onMouseLeave={() => setIsHovered(false)}
+          className={`
+            transition-transform duration-300 ease-in-out
+            flex justify-between items-center
+            px-8 py-4 
+            bg-[#223831] text-[#D47032]
+            ${isVisible ? 'translate-y-0' : '-translate-y-full'}
+        `}>
       
       {/* 1er Enfant (Tout à gauche) : Ton Nom */}
       <div className="text-2xl font-bold tracking-tight">
@@ -40,16 +44,16 @@ export default function Header() {
 
       {/* 2ème Enfant (Tout à droite) : La Navigation complète */}
       <nav className="flex items-center gap-8 font-medium">
-        <Link href="#resume" className="hover:text-blue-400 transition-colors">
+        <Link href="#resume" className="hover:text-[#F1F4EE] transition-colors">
           Resume
         </Link>
-        <Link href="#projets" className="hover:text-blue-400 transition-colors">
+        <Link href="#projets" className="hover:text-[#F1F4EE] transition-colors">
           Portfolio
         </Link>
-        <Link href="#cv" className="hover:text-blue-400 transition-colors">
+        <Link href="#cv" className="hover:text-[#F1F4EE] transition-colors">
           CV
         </Link>
-        <Link href="#contact" className="hover:text-blue-400 transition-colors">
+        <Link href="#contact" className="hover:text-[#F1F4EE] transition-colors">
           Contact
         </Link>
       </nav>

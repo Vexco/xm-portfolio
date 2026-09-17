@@ -6,7 +6,7 @@ export default function Project({ id, title, image, description }) {
         <project
             id={id}
             className="flex flex-row justify-start items-center whitespace-nowrap m-5 min-w-100">
-            <div className="bg-gradient-to-b from-gray-100/40 to-gray/20 max-h-150 max-w-100 m-1 shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out rounded-3xl">
+            <div className="bg-gradient-to-b from-gray-100/80 to-white max-h-150 max-w-100 m-1 shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out rounded-3xl">
                 <p className="m-4">
                     {title} 
                 </p>
