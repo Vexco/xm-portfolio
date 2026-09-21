@@ -11,7 +11,7 @@ const Modal = ({ onClose, children, title }) => {
         <div className="modal-overlay">
             {/* Wrap the whole Modal inside the newly created StyledModalWrapper
             and use the ref */}
-            <div className="modal-wrapper bg-[#F1F4EE]">
+            <div className="modal-wrapper bg-[#F1F4EE] rounded-2xl">
                 <div className="modal bg-[#F1F4EE]">
                     <div className="modal-header bg-[#F1F4EE]">
                         <a href="#" onClick={handleCloseClick}>
