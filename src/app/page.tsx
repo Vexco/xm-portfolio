@@ -1,11 +1,6 @@
 'use client'
 
-import Section from "./components/section";
-import Project from "./components/projectCard";
-import Card from "./components/card";
 import React, { useState } from "react";
-import Logo from '../../public/nextjs.svg'
-import Contact from './components/contactButton'
 import Modal from './components/modal'
 import Email from './components/email-template'
 
