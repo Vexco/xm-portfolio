@@ -33,19 +33,19 @@ export default function Header() {
       
       {/* 1er Enfant (Tout à gauche) : Ton Nom */}
       <div className="text-2xl font-bold tracking-tight">
-        <Link href="#accueil">MANTELLATO Xavier</Link>
+        <Link href="#home">MANTELLATO Xavier</Link>
       </div>
 
       {/* 2ème Enfant (Tout à droite) : La Navigation complète */}
       <nav className="flex items-center gap-8 font-medium">
-        <Link href="#resume" className="hover:text-[#F1F4EE] transition-colors">
-          Resume
+        <Link href="#projects" className="hover:text-[#F1F4EE] transition-colors">
+          Projets
         </Link>
-        <Link href="#projets" className="hover:text-[#F1F4EE] transition-colors">
-          Portfolio
+        <Link href="#skills" className="hover:text-[#F1F4EE] transition-colors">
+          Compétences
         </Link>
-        <Link href="#cv" className="hover:text-[#F1F4EE] transition-colors">
-          CV
+        <Link href="#workflow" className="hover:text-[#F1F4EE] transition-colors">
+          Mes méthodes
         </Link>
         <Link href="#contact" className="hover:text-[#F1F4EE] transition-colors">
           Contact

@@ -1,20 +1,27 @@
+'use client'
+
 import Section from "./components/section";
 import Project from "./components/projectCard";
 import Card from "./components/card";
-import React from "react";
+import React, { useState } from "react";
 import Logo from '../../public/nextjs.svg'
+import Contact from './components/contactButton'
+import Modal from './components/modal'
+import Email from './components/email-template'
 
 export default function Home() {
+  const [showModal, setShowModal] = useState(false);
   return (
-    <main className="min-h-screen min-w-100% flex flex-col items-center">
+    <>
+    <main className="min-h-screen min-w-100% flex flex-col items-center">      
       <div className="flex flex-row items-center justify-center">
-        <div className="flex flex-col w-1/3 m-10 h-150 justify-center items-start">
+        <div className="flex flex-col w-1/3 m-10 h-150 justify-center items-start" id="home" title="home">
           {/* <p className="text-6sm ml-5 mb-5">Disponible pour de nouveau projets</p> */}
           <h1 className="font-serif text-7xl ml-5"><b>Développeur FullStack</b></h1>
           <p className="text-2xl m-5 max-w-150 leading-relaxed">Je conçois des applications pc, mobile ou web de bout en bout. En faisant attention à l'expérience utilisateur et à la qualité du code.</p>
           <div className="flex flex-row items-center justify-start">
-            <button className="m-5 border border-black/25 p-3 rounded-3xl hover:bg-[#227531] bg-[#223831] text-white font-medium">Voir mes projets</button>
-            <button className="m-5 border border-black/25 p-3 rounded-3xl hover:bg-white/85 font-medium">Contactez-moi</button>
+            <a className="m-5 border border-black/25 p-3 rounded-3xl hover:bg-[#227531] bg-[#223831] text-white font-medium" href="#projects">Voir mes projets</a>
+            <a className="m-5 border border-black/25 p-3 rounded-3xl hover:bg-white/85 font-medium" href="#contact">Contactez-moi</a>
           </div>
         </div>
         <div className="flex flex-col w-1/3 rounded-xl border border-black/15 bg-white/50 p-6 m-10">
@@ -52,8 +59,8 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col justify-center w-full max-w-6xl mt-8">
-        <div className="flex flex-col items-start justify-center">
-          <h2 className="text-3xl font-serif font-bold mb-6">Mes projets</h2>
+        <div className="flex flex-col items-start justify-center" id="projects" title="projects">
+          <h2 className="text-5xl font-serif font-bold mb-6">Mes projets</h2>
           <div className="flex flex-row items-center w-full rounded-2xl border border-black/15 bg-white/50 p-6 mb-10 min-h-100">
             <img src="/nextjs.svg" alt="Next.js" className="h-50 w-1/2" />
             <div className="flex flex-col w-1/2">
@@ -76,7 +83,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col justify-center w-full max-w-6xl mt-8">
-        <div className="flex flex-col items-start p-7 mb-10 justify-center rounded-2xl border border-black/15 bg-white/50">
+        <div className="flex flex-col items-start p-7 mb-10 justify-center rounded-2xl border border-black/15 bg-white/50" title="skills" id="skills">
           <h2 className="text-5xl font-serif font-bold mb-6">Mes Compétences</h2>
           <div className="flex flex-row items-center justify-evenly w-full p-6 mb-2">
             <div className="flex flex-col items-start justify-start w-1/3">
@@ -107,8 +114,8 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col justify-center w-full max-w-6xl mt-8">
-        <div className="flex flex-col items-start justify-center">
-          <h2 className="text-3xl font-serif font-bold mb-6">Mes étapes de travail</h2>
+        <div className="flex flex-col items-start justify-center" title="workflow" id="workflow">
+          <h2 className="text-5xl font-serif font-bold mb-6">Mes étapes de travail</h2>
           <div className="flex flex-row items-stretch justify-start w-full p-6 mb-10 min-h-70">
             <div className="flex flex-col items-stretch justify-center rounded-2xl border border-black/15 mr-8 bg-white/50 w-1/4 p-5">
               <h3 className="font-bold font-serif text-2xl leading-relaxed mb-2">Cadrer</h3>
@@ -130,16 +137,23 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col justify-center w-full max-w-6xl mt-8">
-        <div className="flex flex-col items-start p-13 mb-10 justify-center rounded-2xl border border-black/15 bg-[#223831]">
+        <div className="flex flex-col items-start p-13 mb-10 justify-center rounded-2xl border border-black/15 bg-[#223831]" id="contact" title="contact">
           <h2 className="text-5xl font-serif font-bold mb-6 text-white max-w-125">Besoin de me contacter? Une idée à concrétiser?<br/>Parlons-en !</h2>
           <p className="font-serif text-white/65 max-w-75">Je suis disponible pour concevoir, développer ou faire évoluer votre prochain produit numérique.</p>
           <div className="flex flex-row">
-            <a className="bg-[#D47032] text-[#223831] text-sm rounded-full px-5 py-2.5 mt-5 mx-2 transition-transform hover:-translate-y-0.5">xavier.mantellato.pro@gmail.com</a>
-            <a className="text-white text-sm border border-white/25 rounded-full px-5 py-2.5 mt-5 mx-2 transition-transform hover:bg-white/5">LinkedIn</a>
-            <a className="text-white text-sm border border-white/25 rounded-full px-5 py-2.5 mt-5 mx-2 transition-transform hover:bg-white/5">GitHub</a>
+            <button className="bg-[#D47032] text-[#223831] text-sm rounded-full px-5 py-2.5 mt-5 mx-2 transition-transform hover:-translate-y-0.5" onClick={() => setShowModal(true)}>xavier.mantellato.pro@gmail.com</button>
+            {
+              showModal &&
+                <Modal onClose={() => setShowModal(false)} title="Formulaire de contact">
+                  <Email></Email>
+                </Modal>
+            }
+            <a className="text-white text-sm border border-white/25 rounded-full px-5 py-2.5 mt-5 mx-2 transition-transform hover:bg-white/5" href="https://www.linkedin.com/in/xavier-mantellato/">LinkedIn</a>
+            <a className="text-white text-sm border border-white/25 rounded-full px-5 py-2.5 mt-5 mx-2 transition-transform hover:bg-white/5" href="https://github.com/Vexco">GitHub</a>
           </div>
         </div>
       </div>
     </main>
+    </>
   );
 }
