@@ -9,7 +9,7 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-    <main className="min-h-screen w-full flex flex-col items-center px-4 sm:px-6 lg:px-8 overflow-x-hidden">   
+    <main className="min-h-screen w-full flex flex-col items-center px-4 sm:px-6 sm:mt-8 lg:px-8 overflow-x-hidden">   
       {/* Hero Section */}   
       <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-6xl my-8 lg:my-16 gap-8">
         <div className="flex flex-col w-full lg:w-1/2 justify-center items-start" id="home" title="home">
