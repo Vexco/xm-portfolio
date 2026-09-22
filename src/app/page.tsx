@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Modal from './components/modal'
 import Email from './components/email-template'
+import CustImg from './components/Image'
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -57,7 +58,7 @@ export default function Home() {
         <div className="flex flex-col items-start justify-center" id="projects" title="projects">
           <h2 className="text-5xl font-serif font-bold mb-6">Mes projets</h2>
           <div className="flex flex-row items-center w-full rounded-2xl border border-black/15 bg-white/50 p-6 mb-10 min-h-100">
-            <img src="/nextjs.svg" alt="Next.js" className="h-50 w-1/2" />
+            <CustImg src="/nextjs.svg" alt="Next.js" className="h-50 w-1/2" />
             <div className="flex flex-col w-1/2">
               <p className="font-mono text-sm leading-relaxed">01 PRESENTATION  .  FRONT</p>
               <p className="text-3xl font-serif font-bold leading-relaxed">Portfolio Personnel</p>

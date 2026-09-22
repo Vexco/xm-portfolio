@@ -1,8 +1,6 @@
 'use client';
 import emailjs from '@emailjs/browser';
 
-
-
 export default function ContactForm() {
   const sendEmail = (e: any) => {
     e.preventDefault();
