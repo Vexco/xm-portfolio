@@ -23,12 +23,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="bg-[#F1F4EE]">
+      <body className="bg-[#F1F4EE] flex flex-col min-h-screen">
         <Header/>
         {children}
-        <div className="min-h-full" id="modal-root"></div>
+        <div id="modal-root"></div>
         <Footer/>
       </body>
     </html>
